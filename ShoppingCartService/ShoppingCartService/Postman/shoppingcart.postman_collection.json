@@ -1,0 +1,348 @@
+{
+	"info": {
+		"_postman_id": "adadc06c-d3f4-4821-ae30-554a8d1eccac",
+		"name": "shoppingcart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "get all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:44352/api/Users"
+					},
+					"response": []
+				},
+				{
+					"name": "add new user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ID\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:44352/api/Users"
+					},
+					"response": []
+				},
+				{
+					"name": "delete by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "https://localhost:44352/api/Users/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OrderProduct",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "add new element",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://localhost:44352/api/Orders"
+					},
+					"response": []
+				},
+				{
+					"name": "add new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserID\":2,\r\n    \"Email\":\"maitoan@gmail.com\",\r\n    \"DeliveryAddress\":2,\r\n    \"BillingAddress\":2,\r\n    \"Status\":1,\r\n    \"OrderCreated\":\"2008-11-11\",\r\n    \"OrderCheckout\":\"2008-11-11\",\r\n    \"OrderCompleted\":\"2008-11-11\",\r\n    \"Subtotal\":1.2,\r\n    \"Total\":1.2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:44352/api/Orders"
+					},
+					"response": []
+				},
+				{
+					"name": "edit by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ID\":4,\r\n    \"UserID\":2,\r\n    \"Email\":\"maitoan@gmail.com\",\r\n    \"DeliveryAddress\":2,\r\n    \"BillingAddress\":2,\r\n    \"Status\":2,\r\n    \"OrderCreated\":\"2009-11-11\",\r\n    \"OrderCheckout\":\"2009-11-11\",\r\n    \"OrderCompleted\":\"2008-11-11\",\r\n    \"Subtotal\":1.2,\r\n    \"Total\":1.2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:44352/api/Orders/4"
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://localhost:44352/api/Orders/4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Address",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://localhost:44352/api/Addresses"
+					},
+					"response": []
+				},
+				{
+					"name": "add new element",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserID\":2,\r\n    \"Line1\":\"address 1\",\r\n    \"Line2\":\"address 2\",\r\n    \"Line3\":\"address 3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:44352/api/Addresses"
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://localhost:44352/api/Addresses/1"
+					},
+					"response": []
+				},
+				{
+					"name": "edit by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ID\":2,\r\n    \"UserID\":2,\r\n    \"Line1\":\"address 11\",\r\n    \"Line2\":\"address 2\",\r\n    \"Line3\":\"address 32\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:44352/api/Addresses/2"
+					},
+					"response": []
+				},
+				{
+					"name": "delete by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "https://localhost:44352/api/Addresses/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PaymentMethod",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://localhost:44352/api/PaymentMethods/all"
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://localhost:44352/api/PaymentMethods/1"
+					},
+					"response": []
+				},
+				{
+					"name": "add new element",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"PaymentName\": \"payment name 2\",\r\n    \"Enable\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:44352/api/PaymentMethods"
+					},
+					"response": []
+				},
+				{
+					"name": "edit by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ID\":1,\r\n    \"PaymentName\": \"payment name 11\",\r\n    \"Enable\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:44352/api/PaymentMethods/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "https://localhost:44352/api/PaymentMethods/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Invoices",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://localhost:44352/api/Invoices"
+					},
+					"response": []
+				},
+				{
+					"name": "add new element",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"OrderID\":4,\r\n    \"UserID\":2,\r\n    \"Email\":\"maitoan@gmail.com\",\r\n    \"InvoiceCreated\":\"2009-11-11\",\r\n    \"Subtotal\":1.2,\r\n    \"Total\":2.3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:44352/api/Invoices"
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://localhost:44352/api/Invoices/1"
+					},
+					"response": []
+				},
+				{
+					"name": "edit by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ID\":1,\r\n    \"OrderID\":4,\r\n    \"UserID\":2,\r\n    \"Email\":\"maitoan1@gmail.com\",\r\n    \"InvoiceCreated\":\"2009-11-11\",\r\n    \"Subtotal\":12.2,\r\n    \"Total\":22.3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:44352/api/Invoices/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "https://localhost:44352/api/Invoices/1"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
